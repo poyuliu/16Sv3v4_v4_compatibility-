@@ -56,6 +56,8 @@ qiime cutadapt trim-paired --i-demultiplexed-sequences reads_qza/reads_import_V4
                             --verbose \
                             &> primer_trimming_V4O.log 
 ```
+**trunc to 141/140: perfect matching in MiSeq simulation, see archive folder**  
+**trunc to 131/130: for the real condition of 150PE NextSeq sequencing, but poor matching, poor merging by DADA2**  
 ```
 qiime dada2 denoise-paired --i-demultiplexed-seqs trimmed_qza/primer-trimmed_V4O_PE.qza \
                            --p-trunc-len-f 131 \
@@ -63,9 +65,6 @@ qiime dada2 denoise-paired --i-demultiplexed-seqs trimmed_qza/primer-trimmed_V4O
                            --p-n-threads 16 \
                            --output-dir qiime2_outputs/dada2_output_V4O
 ```
-**trunc to 141/140: perfect matching in MiSeq simulation, see archive folder => use for profiling**  
-**trunc to 131/130: real condition in NextSeq sequencing, but poor matching, poor merging by DADA2 => use for claiming failure of NextSeq 150PE** 
-
 ```
 qiime tools export --input-path qiime2_outputs/dada2_output_V4O/denoising_stats.qza --output-path qiime2_outputs/dada2_output_V4O_stats
 qiime feature-table summarize --i-table qiime2_outputs/dada2_output_V4O/table.qza --o-visualization qiime2_outputs/dada2_output_V4O_stats/table_summary.qzv
