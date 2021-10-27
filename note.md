@@ -63,7 +63,7 @@ qiime dada2 denoise-paired --i-demultiplexed-seqs trimmed_qza/primer-trimmed_V4O
                            --p-n-threads 16 \
                            --output-dir qiime2_outputs/dada2_output_V4O
 ```
-**trunc to 141/140: perfect matching in MiSeq simulation, see archive folder => use for profiling**
+**trunc to 141/140: perfect matching in MiSeq simulation, see archive folder => use for profiling**  
 **trunc to 131/130: real condition in NextSeq sequencing, but poor matching, poor merging by DADA2 => use for claiming failure of NextSeq 150PE** 
 
 ```
