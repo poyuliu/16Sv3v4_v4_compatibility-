@@ -153,7 +153,7 @@ cp qiime2_outputs/dada2_output_V3V4toV4N_exported/feature-table.txt ./ASV_tables
 
 
 
-## V4 SE  
+# V4 SE  
 mkdir ../V3V4_VS_V4_Project/V4O/R1
 mv ../V3V4_VS_V4_Project/V4O/*R1_001.fastq.gz ../V3V4_VS_V4_Project/V4O/R1
 mkdir ../V3V4_VS_V4_Project/V4N/R1
