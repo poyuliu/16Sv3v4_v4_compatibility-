@@ -257,13 +257,14 @@ time qiime feature-classifier classify-sklearn --i-reads representative_sequence
                                           --output-dir Taxonomy/V4O_F141R140
 qiime tools export --input-path Taxonomy/V4O_F141R140/classification.qza --output-path Taxonomy/V4O_F141R140
 
-
-`#https://github.com/torognes/vsearch/wiki/VSEARCH-pipeline
+`
+#https://github.com/torognes/vsearch/wiki/VSEARCH-pipeline
 #clustering 97%
 #vsearch --usearch_global ../qiime2_outputs/dada2_output_V4N_exported/dna-sequences.fasta \
 #        --db ~/Alex11_poyuliu/metagenome_tool/SILVA/NR132/SILVA_132_QIIME_release/rep_set/rep_set_16S_only/97/silva_132_97_16S.fna \
 #        --id 0.97 \
-#        --uc test_vsearch_db`
+#        --uc test_vsearch_db
+`
 
 cd vsearch
 mkdir FASTA
